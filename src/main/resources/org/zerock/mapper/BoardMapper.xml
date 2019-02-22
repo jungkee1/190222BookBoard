@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--org.zerock.mapper 밑에 쓰는 이유는 mybatis 등록을 root-context에 그렇게 해놨음  -->
+<mapper namespace="org.zerock.mapper.BoardMapper">
+
+<insert id="insert"> <!--BoardMapper.java에서 함수 이름으로 부룬다 함수 이름 = id  -->
+	insert into tbl_board(bno,title,content,writer) values(seq_board.nextval,#{title},#{content},#{writer})
+</insert>
+
+
+</mapper>
