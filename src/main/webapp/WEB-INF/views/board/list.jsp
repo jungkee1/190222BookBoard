@@ -55,7 +55,7 @@
 				<div class='row'>
 					<div class="col-lg-12">
 
-						<form id='searchForm' action="/board/list" method='get'>
+						<form id='searchForm' action="/book/board/list" method='get'>
 							<select name='type'>
 								<option value=""
 									<c:out value="${pageMaker.cri.type == null?'selected':''}"/>>--</option>
@@ -126,7 +126,7 @@
 				<!--  end Pagination -->
 			</div>
 
-			<form id='actionForm' action="/board/list" method='get'>
+			<form id='actionForm' action="/book/board/list" method='get'>
 				<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
 				<input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
 
@@ -205,7 +205,7 @@
 
 						$("#regBtn").on("click", function() {
 
-							self.location = "/board/register";
+							self.location = "/book/board/register";
 
 						});
 
@@ -236,7 +236,7 @@
 																	"href")
 															+ "'>");
 											actionForm.attr("action",
-													"/board/get");
+													"/book/board/get");
 											actionForm.submit();
 
 										});

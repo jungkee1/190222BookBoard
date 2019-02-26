@@ -7,7 +7,7 @@ var replyService = (function() {
 
 		$.ajax({
 			type : 'post',
-			url : '/replies/new',
+			url : '/book/replies/new',
 			data : JSON.stringify(reply),
 			contentType : "application/json; charset=utf-8",
 			success : function(result, status, xhr) {
@@ -47,7 +47,7 @@ var replyService = (function() {
 	    var bno = param.bno;
 	    var page = param.page || 1;
 	    
-	    $.getJSON("/replies/pages/" + bno + "/" + page + ".json",
+	    $.getJSON("/book/replies/pages/" + bno + "/" + page + ".json",
 	        function(data) {
 	    	
 	          if (callback) {
@@ -65,7 +65,7 @@ var replyService = (function() {
 	function remove(rno, callback, error) {
 		$.ajax({
 			type : 'delete',
-			url : '/replies/' + rno,
+			url : '/book/replies/' + rno,
 			success : function(deleteResult, status, xhr) {
 				if (callback) {
 					callback(deleteResult);
@@ -85,7 +85,7 @@ var replyService = (function() {
 
 		$.ajax({
 			type : 'put',
-			url : '/replies/' + reply.rno,
+			url : '/book/replies/' + reply.rno,
 			data : JSON.stringify(reply),
 			contentType : "application/json; charset=utf-8",
 			success : function(result, status, xhr) {
@@ -103,7 +103,7 @@ var replyService = (function() {
 
 	function get(rno, callback, error) {
 
-		$.get("/replies/" + rno + ".json", function(result) {
+		$.get("/book/replies/" + rno + ".json", function(result) {
 
 			if (callback) {
 				callback(result);

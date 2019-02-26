@@ -56,7 +56,7 @@
 </form> --%>
 
 
-<form id='operForm' action="/boad/modify" method="get">
+<form id='operForm' action="/book/borad/modify" method="get">
   <input type='hidden' id='bno' name='bno' value='<c:out value="${board.bno}"/>'>
   <input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum}"/>'>
   <input type='hidden' name='amount' value='<c:out value="${cri.amount}"/>'>
@@ -153,7 +153,7 @@
 
 
 
-<script type="text/javascript" src="/resources/js/reply.js"></script>
+<script type="text/javascript" src="/book/resources/js/reply.js"></script>
 
 <script>
 
@@ -275,7 +275,7 @@ $(document).ready(function () {
         return;
       }
        for (var i = 0, len = list.length || 0; i < len; i++) {
-           str +="<li class='left clearfix' data-rno='"+list[i].rno+"'>";
+           str +="<li class='' data-rno='"+list[i].rno+"'>";
            str +="  <div><div class='header'><strong class='primary-font'>"+list[i].replyer+"</strong>"; 
            str +="    <small class='pull-right text-muted'>"+replyService.displayTime(list[i].replyDate)+"</small></div>";
            str +="    <p>"+list[i].reply+"</p></div></li>";
@@ -488,7 +488,7 @@ $(document).ready(function() {
   
   $("button[data-oper='modify']").on("click", function(e){
     
-    operForm.attr("action","/board/modify").submit();
+    operForm.attr("action","/book/board/modify").submit();
     
   });
   
@@ -496,7 +496,7 @@ $(document).ready(function() {
   $("button[data-oper='list']").on("click", function(e){
     
     operForm.find("#bno").remove();
-    operForm.attr("action","/board/list")
+    operForm.attr("action","/book/board/list")
     operForm.submit();
     
   });  

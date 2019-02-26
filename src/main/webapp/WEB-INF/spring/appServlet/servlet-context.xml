@@ -25,7 +25,7 @@
 	<!-- 여기로 가서 annotation들을 찾아서 작업을 수행한다 --> <!-- annotation들의 위치를 참고 하는 base-package를 결정해주는 곳  -->
 	<!-- 여기는 jsp 관련 root는 공통적인작업  -->
 	<context:component-scan base-package="org.zerock.book" />
-	<context:component-scan base-package="org.zerock.service" />
+	<context:component-scan base-package="org.zerock.domain" /> <!--이거를 잡아주면 Autowired나 inject한 아이들의 원 객체에 Component등을 표시 안해도 찾아감  -->
 	
 	
 	

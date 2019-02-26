@@ -41,6 +41,8 @@
 	<!-- root는 공통적인작업  servelt은 jsp 관련-->
 	<mybatis-spring:scan base-package="org.zerock.mapper"></mybatis-spring:scan>
 	
+	<context:component-scan base-package="org.zerock.service" /> <!--  transaction 있는 곳을 root에 추가 해줘야 전체가 다 알아먹음 appServlet에 하면 안된다 -->
+	<!-- root는 전체적인것, 항상 먼저 띄워놓는걸로, appServlet은 그 페이지가 딱 실행 될떄 동작 하는 느낌으로  -->
 	
 		
 </beans>

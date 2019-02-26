@@ -2,11 +2,9 @@ package org.zerock.service;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-import org.zerock.book.HomeController;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
+
 
 
 public interface BoardService {
@@ -22,8 +20,8 @@ public interface BoardService {
 	
 	public List<BoardVO> getList(); //전체보기
 	
-//	public List<BoardVO> getList(Criteria cri);
-//	public int getTotal(Criteria cri);
+	public List<BoardVO> getList(Criteria cri); //검색포함 전체보기
+	public int getTotal(Criteria cri);	//검색포함 게시물 수
 	
 	public int getTotal(); //개수
 

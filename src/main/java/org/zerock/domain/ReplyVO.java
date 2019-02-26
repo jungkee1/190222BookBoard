@@ -8,6 +8,14 @@ public class ReplyVO {
 	private String reply;
 	private String replyer;
 	private Date replyDate;
+	private Date updateDate;
+	
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 	public Long getRno() {
 		return rno;
 	}
